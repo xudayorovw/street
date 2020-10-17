@@ -1,0 +1,265 @@
+/* =========  VAR CSS  START  ============ */
+
+:root{
+    --fm: 'Raleway', sans-serif;
+    --fm-thin: 100;
+    --fm-light: 300;
+    --fm-regul: 400;
+    --fm-bold: 700;
+    --fm-black: 900;
+    --green_75: rgba(105, 207, 23, 0.75);  /* link active */
+    --green_90: rgba(105, 207, 23, 0.90);  /* gamburger uchun */
+    --green: #69cf17; /* LINK rangi  */
+    --green_1: #4e9f0d; /* logoni bacgraundi  */
+    --green_2: #62be19; /* logoni borderi  */
+    --gray: #7a7a7a; /* section link */
+    --gray_p: #dedede; /* HEADER - PARAGRAF */
+    --white: #ffff;
+    --dark: #060002; /* BODY UCHUN  */
+    --black: rgba(30, 30, 30, 0.1); /* ICHKI Box SHADOW */
+    --col-1: calc(100% / 12 * 1);
+    --col-2: calc(100% / 12 * 2);
+    --col-3: calc(100% / 12 * 3);
+    --col-4: calc(100% / 12 * 4);
+    --col-5: calc(100% / 12 * 5);
+    --col-6: calc(100% / 12 * 6);
+    --col-7: calc(100% / 12 * 7);
+    --col-8: calc(100% / 12 * 8);
+    --col-9: calc(100% / 12 * 9);
+    --col-10: calc(100% / 12 * 10);
+    --col-11: calc(100% / 12 * 11);
+    --col-12: calc(100% / 12 * 12);
+}
+
+
+/* =========  VAR CSS  end  ============ */
+
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: var(--fm);
+    background: var(--dark);
+}
+
+.container{
+    max-width: 1140px;
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+
+/* ================  justify  ================ */
+.justify-content-center{
+    justify-content: center;
+}
+.justify-between{
+    justify-content: space-between;
+}
+.justify-content-start{
+    justify-content: flex-start;
+}
+
+
+/* ================  align-align  ================ */
+.align-center{
+    align-items: center;
+}
+.align-start{
+    align-items: flex-start;
+}
+
+
+/* ================  flex-direction  ================ */
+.flex-direction-column{
+    flex-direction: column;
+}
+
+
+/* ================  col-  ================ */
+.col-12{
+    width: var(--col-12);
+    padding: 0 15px;
+}
+.col-4{
+    width: var(--col-4);
+    padding: 0 15px;
+}
+
+
+
+
+/* ==============   HEADER_START   ============= */
+
+header{
+    width: 100%;
+    min-height: 770px;
+    background: url('./images/bg_img.jpg') no-repeat center center / cover;    
+}
+.logo{
+    color: var(--white);
+    font-size: 24px;
+    font-weight: var(--fm-bold);
+    background: var(--green_1);
+    border: 3px solid var(--green_2);
+    text-transform: uppercase;
+    border-radius: 5px;
+    padding: 11px 22px;
+    box-shadow: inset 0 0 25px var(--black);
+    line-height: 17px;
+}
+
+header nav ul{
+    display: flex;
+}
+
+header nav ul li a{
+    color: var(--green);
+    font-weight: var(--fm-light);
+    font-size: 20px;
+    padding: 37px 26px 29px 26px;
+    display: flex;
+    transition: 500ms;
+}
+header nav ul li .active{
+    background: var(--green_75);
+    padding: 37px 11px 29px 10px;
+    color: var(--white);
+}
+header nav ul li .active:hover{
+    padding: 37px 11px 29px 10px;
+}
+header nav ul li a:hover{
+    background: var(--green_75);
+    padding: 37px 26px 29px 26px;
+    color: var(--white);
+}
+header nav ul li .active span{
+    width: 24px;
+    height: 24px;
+    background: var(--white);
+    color: var(--green);
+    display: block;
+    border-radius: 50%;
+    text-align: center;
+    margin-left: 6px;
+}
+header h1{
+    font-size: 72px;
+    font-weight: var(--fm-black);
+    color: var(--green);
+    text-transform: uppercase;
+    margin-top: 145px;
+}
+
+header p:first-of-type{
+    font-size: 36px;
+    font-weight: var(--fm-regul);
+    color: var(--green);
+    margin-bottom: 30px;
+}
+
+header p:nth-last-of-type(2){
+    font-size: 18px;
+    line-height: 25px;
+    color: var(--gray_p);
+    margin-bottom: 75px;
+    font-weight: var(--fm-regul);
+}
+header .header_price{
+    font-size: 60px;
+    font-weight: var(--fm-thin);
+    background: var(--green_75);
+    padding: 28px 90px;
+    color: var(--white);
+}
+/* <!-- =============================== HEADER END =============================== --> */
+
+main ul{
+    margin:  50px 0 69px 0 !important;
+}
+main ul li{
+    margin-right: 50px;
+}
+
+main ul li a{
+    color: var(--gray);
+    font-weight: var(--fm-regul);
+    font-size: 20px;
+
+}
+main ul li a.active , main ul li a:hover{
+    color: var(--green);
+}
+
+main .section_img{
+    width: 100%;
+    height: 350px;
+    position: relative;
+}
+main .section_img img{
+    width: 100%;
+    height: 100%;
+}
+main .section_img .price{
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+}
+main .section_img .price span{
+    display: block;
+    padding: 22px 58px;
+    color: var(--white);
+    font-size: 24px;
+    font-weight: var(--fm-regul);
+    background: var(--green_75);
+}
+main .section_img button{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    background: var(--green_90);
+    font-size: 24px;
+    font-weight: var(--fm-regul);
+    color: var(--white);
+    opacity: 0;
+    border: none;
+    cursor: pointer;
+}
+main .section_img:hover button{
+    opacity: 1;
+}
+main .section_img:hover .price{
+    opacity: 0;
+}
+main section h2{
+    font-size: 24px;
+    font-weight: var(--fm-bold);
+    margin: 36px 0 15px 0;
+    text-transform: uppercase;
+    color: var(--green);
+}
+
+main section p{
+    font-size: 16px;
+    font-weight: var(--fm-regul);
+    line-height: 25px;
+    color: var(--gray_p);
+    margin-bottom: 50px;
+}
